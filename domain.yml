@@ -1,0 +1,103 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - gather_information
+  - get_weather
+  - some_unrecognized_intent
+
+entities: 
+  - feeling 
+  - information
+  - location
+  - date
+  - requested_weather
+
+slots:
+  feeling:
+    type: text
+    mappings:
+      - type: custom
+        from_entity: feeling
+        value: extracted_feeling
+  information:
+    type: text
+    mappings:
+      - type: custom
+        from_entity: information
+        value: extracted_information
+  location:
+    type: text
+    mappings:
+      - type: custom
+        from_entity: location
+        value: extracted_location
+  date:
+    type: text
+    mappings:
+      - type: custom
+        from_entity: date
+        value: extracted_date
+  requested_weather:
+    type: text
+    mappings:
+      - type: custom
+        from_entity: requested_weather
+        value: extracted_requested_weather
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+  - custom:  
+      image: "./isolated-happy-smiling-dog-white-background-portrait-4.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_unhappy:
+  - text: "Not quite well, but looking forward!"
+
+  utter_goodbye:
+  - text: "Bye, see you next time"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_help:
+  - text: "How can I help you?"
+
+  utter_feeling:
+  - text: "I am fine."
+
+  utter_provide_information:
+  - text: "Sure, I can certainly help with that. What information do you want?"
+
+  utter_get_weather:
+  - text: "I can certainly give you the weather. Can you provide me a location and date? "
+
+  utter_default:
+  - text: "I'm sorry, I didn't understand the request."
+
+actions: 
+  - action_get_weather
+
+templates:
+  utter_default:
+  - text: "I'm sorry, I didn't understand the request."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
