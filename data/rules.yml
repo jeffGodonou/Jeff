@@ -12,10 +12,10 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Give information anytime the user is looking for something
-  steps:
-  - intent: gather_information
-  - action: utter_provide_information
+#- rule: Give information anytime the user is looking for something
+#  steps:
+#  - intent: chat/get_information
+#  - action: utter_chat/get_information
 
 #- rule: Get the weather
 #  steps:

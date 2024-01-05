@@ -89,3 +89,10 @@ stories:
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+
+- story: get the meteo
+  steps:
+  - user: | 
+      could you help me with the weather?
+    intent: get_weather
+  - action: utter_get_weather

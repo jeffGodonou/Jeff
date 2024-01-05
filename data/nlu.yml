@@ -91,7 +91,7 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: gather_information
+- intent: chat/get_information
   examples: |
     - I am looking for something
     - Can you help me with some informations?
@@ -100,7 +100,7 @@ nlu:
     - Do you know how it work?
     - Can you explain ...
 
-- intent: get_weather
+- intent: chat/get_weather
   examples: |
     - I would like to know the weather
     - Can you check the weather for me please ?

@@ -8,8 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - gather_information
-  - get_weather
+  - chat
   - some_unrecognized_intent
 
 entities: 
@@ -17,7 +16,7 @@ entities:
   - information
   - location
   - date
-  - requested_weather
+#  - requested_weather
 
 slots:
   feeling:
@@ -35,15 +34,15 @@ slots:
   location:
     type: text
     mappings:
-      - type: custom
-        from_entity: location
-        value: extracted_location
+      - type: from_entity 
+        entity: location
+        intent: chat/get_weather
   date:
     type: text
     mappings:
-      - type: custom
-        from_entity: date
-        value: extracted_date
+      - type: from_entity
+        entity: date
+        intent: chat/get_weather
   requested_weather:
     type: text
     mappings:
@@ -82,11 +81,11 @@ responses:
   utter_feeling:
   - text: "I am fine."
 
-  utter_provide_information:
+  utter_chat/get_information:
   - text: "Sure, I can certainly help with that. What information do you want?"
 
-  utter_get_weather:
-  - text: "I can certainly give you the weather. Can you provide me a location and date? "
+  utter_chat/get_weather :
+  - text: "I can help with that. Can you provide me a location and date to specify my search ?"
 
   utter_default:
   - text: "I'm sorry, I didn't understand the request."
