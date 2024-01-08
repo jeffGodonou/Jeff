@@ -38,6 +38,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - valid
 
 - intent: deny
   examples: |
@@ -48,6 +49,7 @@ nlu:
     - don't like that
     - no way
     - not really
+    - incorrect
 
 - intent: mood_great
   examples: |
@@ -83,6 +85,8 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - I am unsatisfied
+    - the answer is non sensical
 
 - intent: bot_challenge
   examples: |
