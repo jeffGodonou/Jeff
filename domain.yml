@@ -8,7 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - chat
+  - chitchat
   - some_unrecognized_intent
 
 entities: 
@@ -81,10 +81,10 @@ responses:
   utter_feeling:
   - text: "I am fine."
 
-  utter_chat/get_information:
+  utter_chitchat/get_information:
   - text: "Sure, I can certainly help with that. What information do you want?"
 
-  utter_chat/get_weather :
+  utter_chitchat/get_weather :
   - text: "I can help with that. Can you provide me a location and date to specify my search ?"
 
   utter_default:

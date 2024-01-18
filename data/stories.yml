@@ -35,21 +35,16 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
-  - intent: chat/get_information
-  - action: utter_chat/get_information
+  - intent: chitchat/get_information
+  - action: utter_chitchat/get_information
 
 - story: ask weather in New York
   steps:
-    - intent: chat/get_weather
-#      entities:
-#        - location: "New York"
-    - action: action_get_weather
+    - intent: chitchat/get_weather
+    - action: utter_chitchat/get_weather
     - slot_was_set:
        - location : "New York"
-#      - requested_weather : true
-#    - action: utter_get_weather
-#    - slot_was_set:
-#      - requested_weather : false
+    - action: action_get_weather
     - action: utter_did_that_help
 
 - story: Fallback

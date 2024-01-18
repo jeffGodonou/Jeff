@@ -95,16 +95,14 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: chat/get_information
+- intent: chitchat/get_information
   examples: |
-    - I am looking for something
-    - Can you help me with some informations?
+    - I am looking for something ...
+    - Can you help me?
     - I want to know something
-    - Do you have access to this info?
-    - Do you know how it work?
     - Can you explain ...
 
-- intent: chat/get_weather
+- intent: chitchat/get_weather
   examples: |
     - I would like to know the weather
     - Can you check the weather for me please ?

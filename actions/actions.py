@@ -39,10 +39,9 @@ class ActionGetWeather(Action):
     def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
     ) -> List[Dict[Text, Any]]:
+        
         # Get location from the tracker
         location = tracker.get_slot("location")
-        # dispatcher.utter_message("The weather in {} on {} is sunny.".format(location))
-        # tracker.set_slot("requested_weather", True)
 
         # OpenWeatherMap API key
         api_key = '7f88e0b55a9fa291a1b2854af083a0e3'

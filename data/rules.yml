@@ -2,6 +2,11 @@ version: "3.1"
 
 rules:
 
+- rule: Greet 
+  steps:
+  - intent: greet
+  - action: utter_greet 
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -12,16 +17,10 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-#- rule: Give information anytime the user is looking for something
+#- rule: respond to chitchat
 #  steps:
-#  - intent: chat/get_information
-#  - action: utter_chat/get_information
-
-#- rule: Get the weather
-#  steps:
-#  - intent: get_weather
-#  - action: utter_get_weather
-#  - action: action_get_weather
+#  - intent: chitchat
+#  - action: utter_chitchat
 
 - rule: Fallback
   steps:
