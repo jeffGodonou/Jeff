@@ -44,6 +44,7 @@ stories:
     - action: utter_chitchat/get_weather
     - slot_was_set:
        - location : "New York"
+       - date: "18/01/2024"
     - action: action_get_weather
     - action: utter_did_that_help
 
@@ -51,3 +52,7 @@ stories:
   steps:
     - intent: some_unrecognized_intent
     - action: utter_default  
+
+- story: interactive_story_1
+  steps:
+  - intent: chitchat
