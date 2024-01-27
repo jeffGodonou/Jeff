@@ -1,0 +1,12 @@
+{
+  "utter_chitchat/get_information": [
+    {
+      "text": "Sure, I can certainly help with that. What information do you want?"
+    }
+  ],
+  "utter_chitchat/get_weather": [
+    {
+      "text": "I can help with that. Can you provide me a location and date to specify my search ?"
+    }
+  ]
+}
