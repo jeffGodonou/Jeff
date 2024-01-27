@@ -63,6 +63,7 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - super
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -102,3 +103,4 @@ nlu:
 - intent: chitchat
   examples: |
     - weather
+    - [Paris](text) i[n 18/01/20]{"entity": "text", "value": "18/01/2024"}24
