@@ -42,6 +42,8 @@ class ActionGetWeather(Action):
         
         # Get location from the tracker
         location = tracker.get_slot("location")
+        date = tracker.get_slot("date")
+        message = f"The weather in {location} at {date}."
 
         # OpenWeatherMap API key
         api_key = '7f88e0b55a9fa291a1b2854af083a0e3'

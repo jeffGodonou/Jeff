@@ -3,15 +3,15 @@ digraph  {
 "-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
 1 [class=active, fontsize=12, label=action_session_start];
 2 [class=active, fontsize=12, label="utter_chitchat/get_weather"];
-3 [class=active, fontsize=12, label=action_extract_slots];
-4 [class=active, fontsize=12, label=action_get_weather];
-5 [class="dashed active", fontsize=12, label=action_default_fallback];
+3 [class=active, fontsize=12, label=action_get_weather];
+4 [class="dashed active", fontsize=12, label=action_default_fallback];
+5 [class="intent active", fillcolor=lightblue, label="/chitchat/weather", shape=rect, style=filled];
 6 [class="intent active", fillcolor=lightblue, label="/chitchat/weather", shape=rect, style=filled];
 0 -> "-1"  [class="", key=NONE, label=""];
 0 -> 1  [class=active, key=NONE, label=""];
-1 -> 2  [class=active, key=NONE, label=""];
+1 -> 5  [class=active, key=0];
 2 -> 6  [class=active, key=0];
 3 -> 4  [class=active, key=NONE, label=""];
-4 -> 5  [class=active, key=NONE, label=""];
+5 -> 2  [class=active, key=0];
 6 -> 3  [class=active, key=0];
 }
