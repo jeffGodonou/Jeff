@@ -38,7 +38,7 @@ stories:
   - intent: chitchat/get_information
   - action: utter_chitchat/get_information
 
-- story: ask weather in New York
+- story: get weather for New York
   steps:
     - intent: chitchat/get_weather
     - action: utter_chitchat/get_weather
@@ -48,24 +48,15 @@ stories:
     - action: action_get_weather
     - action: utter_did_that_help
 
-- story: Fallback
+- story: get weather for Paris 1
   steps:
-    - intent: some_unrecognized_intent
-    - action: utter_default  
-
-- story: interactive_story_1
-  steps:
-  - intent: chitchat
-
-- story: interactive_story_1
-  steps:
-  - intent: chitchat
+  - intent: chitchat/get_weather
     entities:
     - location: Paris
+    - date : "12/02/2024"
   - action: action_get_weather
   - intent: chitchat
   - action: utter_chitchat/get_weather
-  - action: action_default_fallback
   - action: utter_did_that_help
   - action: utter_help
   - intent: chitchat
@@ -73,6 +64,7 @@ stories:
   - intent: chitchat
     entities:
     - location: Paris
+    - date : "12/02/2024"
   - action: action_extract_slots
   - action: action_default_fallback
   - intent: chitchat
@@ -81,14 +73,20 @@ stories:
   - action: action_extract_slots
   - action: action_get_weather
 
-- story: interactive_story_1
+- story: get weather for Sydney
   steps:
   - action: utter_chitchat/get_weather
   - intent: chitchat
     entities:
-    - text: Paris
-  - intent: chitchat/weather
+    - text: Sydney
+  - intent: chitchat/get_weather
     entities:
-    - location: Paris
+    - location: Sydney
+    - date : "15/02/2024"
   - action: action_extract_slots
   - action: action_get_weather
+
+#- story: Fallback
+#  steps:
+#    - intent: some_unrecognized_intent
+#    - action: utter_default  

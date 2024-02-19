@@ -15,11 +15,12 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+
 - intent: goodbye
   examples: |
     - cu
     - good by
-    - cee you later
+    - see you later
     - good night
     - bye
     - goodbye
@@ -27,6 +28,7 @@ nlu:
     - see you around
     - bye bye
     - see you later
+
 - intent: affirm
   examples: |
     - yes
@@ -36,6 +38,7 @@ nlu:
     - that sounds good
     - correct
     - valid
+
 - intent: deny
   examples: |
     - no
@@ -46,10 +49,12 @@ nlu:
     - no way
     - not really
     - incorrect
+
 - intent: mood_great
   examples: |
     - perfect
     - great
+    - fine
     - amazing
     - feeling like a king
     - wonderful
@@ -57,13 +62,14 @@ nlu:
     - I am great
     - I am amazing
     - I am going to save the world
-    - I am fine and you
+    - I am fine and you 
     - super stoked
     - extremely good
     - so so perfect
     - so good
     - so perfect
     - super
+
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -82,33 +88,31 @@ nlu:
     - so sad
     - I am unsatisfied
     - the answer is non sensical
+
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
 - intent: chitchat/get_information
   examples: |
     - I am looking for something ...
     - Can you help me?
     - I want to know something
     - Can you explain ...
+
 - intent: chitchat/get_weather
   examples: |
     - I would like to know the weather
     - Can you check the weather for me please ?
     - I am unsure about the temperature outside
     - weather, today?
-- intent: chitchat
-  examples: |
-    - weather
-    - [Paris](text) {"entity": "date", "value": "18/01/2024"}
-    - [Paris](text) 18/01/2024
-    - the weather
-- intent: chitchat/weather
-  examples: |
-    - [Paris](location) 18/01/2024
+    - [Paris](location) [18/01/2024](date)
+    - [Melbourne](location) [18/02/2024](date)
+    - [New york](location) [20/01/2024](date)
+
 - synonym: 18/01/2024
   examples: |
     - n 18/01/20
