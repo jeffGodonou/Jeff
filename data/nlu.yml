@@ -1,118 +1,126 @@
 version: "3.1"
-nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - see you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+nlu: 
+  - regex: date
+    examples: |
+      - "[0-9]{4}-[0-1][0-9]-[0-3][0-9]"  # YYYY-MM-DD format
+      - "[0-3][0-9]/[0-1][0-9]/[0-9]{4}"  # DD/MM/YYYY format
+      - "(january|february|march|april|may|june|july|august|september|october|november|december)[ ]?[0-9]{1,2}[,.]?[ ]?[0-9]{4}"  # Month name variations
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-    - valid
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-    - incorrect
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - see you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - fine
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - I am fine and you 
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-    - super
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - valid
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-    - I am unsatisfied
-    - the answer is non sensical
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - incorrect
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - fine
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - I am fine and you 
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+      - super
 
-- intent: chitchat/get_information
-  examples: |
-    - I am looking for something ...
-    - Can you help me?
-    - I want to know something
-    - Can you explain ...
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+      - I am unsatisfied
+      - the answer is non sensical
 
-- intent: chitchat/get_weather
-  examples: |
-    - I would like to know the weather
-    - Can you check the weather for me please ?
-    - I am unsure about the temperature outside
-    - weather, today?
-    - [Paris](location) [18/01/2024](date)
-    - [Melbourne](location) [18/02/2024](date)
-    - [New york](location) [20/01/2024](date)
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
 
-- synonym: 18/01/2024
-  examples: |
-    - n 18/01/20
+  - intent: chitchat/get_information
+    examples: |
+      - I am looking for something ...
+      - Can you help me?
+      - I want to know something
+      - Can you explain ...
+
+  - intent: chitchat/get_weather
+    examples: |
+      - I would like to know the weather
+      - Can you check the weather for me please ?
+      - I am unsure about the temperature outside
+      - weather, today?
+      - I want the weather in [Paris]{"entity": "location"} the [18/01/2024]{"entity": "date"}
+      - [Melbourne](location) [18/02/2024](date)
+      - [New york](location) [20/01/2024](date)
+      - what is the weather in [Tokio](location) [tomorrow](date)
+
+  
+  - synonym: 18/01/2024
+    examples: |
+      - n 18/01/24

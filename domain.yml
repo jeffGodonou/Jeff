@@ -6,8 +6,6 @@ intents:
 - chitchat:
     used_entities:
     - date
-    - feeling
-    - information
     - location
     is_retrieval_intent: true
 - deny
@@ -19,41 +17,23 @@ intents:
 
 entities:
 - location
-- feeling
-- information
 - date
+#  use_regexes: true
+#      regexes:
+#        - "[0-9]{4}-[0-1][0-9]-[0-3][0-9]"  # YYYY-MM-DD format
+#        - "[0-3][0-9]/[0-1][0-9]/[0-9]{4}"  # DD/MM/YYYY format
 
 slots:
-  feeling:
-    type: text
-    mappings:
-    - type: custom
-      from_entity: feeling
-      value: extracted_feeling
-  information:
-    type: text
-    mappings:
-    - type: custom
-      from_entity: information
-      value: extracted_information
   location:
     type: text
     mappings:
     - type: from_entity
       entity: location
-      intent: chitchat/get_weather
   date:
     type: text
     mappings:
     - type: from_entity
       entity: date
-      intent: chitchat/get_weather
-  requested_weather:
-    type: text
-    mappings:
-    - type: custom
-      from_entity: requested_weather
-      value: extracted_requested_weather
 
 responses:
   utter_greet:

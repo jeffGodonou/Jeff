@@ -1,0 +1,14 @@
+[
+  {
+    "name": "date",
+    "pattern": "\"(january|february|march|april|may|june|july|august|september|october|november|december)[ ]?[0-9]{1,2}[,.]?[ ]?[0-9]{4}\"  # Month name variations"
+  },
+  {
+    "name": "date",
+    "pattern": "\"[0-3][0-9]/[0-1][0-9]/[0-9]{4}\"  # DD/MM/YYYY format"
+  },
+  {
+    "name": "date",
+    "pattern": "\"[0-9]{4}-[0-1][0-9]-[0-3][0-9]\"  # YYYY-MM-DD format"
+  }
+]
